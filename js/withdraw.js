@@ -35,7 +35,16 @@
 
 
 document.getElementById('withdraw-button').addEventListener('click', function () {
-    console.log('gg');
+    const newWithdrawAmount = getInputFieldValueById('withdraw-input');
+    const previousWithdrawTotal = getElementValueById('withdraw-total');
+    const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    // set value
+    setTextElementValueById('withdraw-total', newWithdrawTotal);
+    const previousBalanceTotal = getElementValueById('balance-total');
+    const newBalanceTotal = previousBalanceTotal - newWithdrawTotal;
+    // set value 
+    setTextElementValueById('balance-total', newBalanceTotal);
+
 })
 
 
