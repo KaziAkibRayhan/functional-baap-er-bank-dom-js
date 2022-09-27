@@ -36,7 +36,22 @@
 // })
 
 
+document.getElementById('deposit-button').addEventListener('click', function () {
+    const newDepositAmount = getInputFieldValueById('deposit-input');
+    const previousDepositTotal = getElementValueById('deposit-total');
+    const newDepositTotal = previousDepositTotal + newDepositAmount;
+    // Set value
+    setTextElementValueById('deposit-total', newDepositTotal);
 
+    // get previous balance
+    const previousBalanceTotal = getElementValueById('balance-total');
+    const newBalanceTotal = previousBalanceTotal + newDepositTotal;
+    // set value 
+    setTextElementValueById('balance-total', newBalanceTotal);
+
+
+
+})
 
 
 
